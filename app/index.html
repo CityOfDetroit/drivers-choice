@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Car Insurance Stuff</title>
+  <meta name="description" content="Project to help detroiters get informed about local elections.">
+  <meta name="author" content="Edgar Montes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <!--build:css css/styles.min.css-->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css" type="text/css" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <!--endbuild-->
+</head>
+<body>
+  <article id="map"></article>
+  <header>
+    <a href="#about">About</a>
+    <a href="#state-reps">Calculate your savings</a>
+    <a href="#calculator">Contact your state representatives</a>
+  </header>
+  <section id="about" class="content-section">
+    <div class="">
+      <h2>You're paying too much for car insurance. But there's a solution.</h2>
+      <p>
+      Michigan drivers pay the nation's highest car insurance premiums, averaging $2,400 a year, while nearby states pay less than half that amount.
+      </p>
+      <p>
+      How do we fix it? The solution is Drivers Choice, a plan to cut rates an average 20% to 50% statewide.
+      </p>
+      <p>
+      Michigan drivers are forced to pay for unlimited lifetime health insurance, something no other state in America does.
+      </p>
+      <p>
+      And car insurance companies in Michigan pay outrageous rates for medical treatments like MRIs, CT scans and physical therapy — three to four times as much as private health insurance — because there are no set rates for those treatments.
+      </p>
+      <p>
+      Drivers Choice would give drivers the freedom to choose the level of health coverage they can afford, while still preserving the best levels of coverage in the nation.
+      </p>
+      <p>
+      And it would set fee rates for medical treatments so that car insurance companies get the same discounts bargained for Medicare and private health insurance companies.
+      </p>
+      <p>
+      Tired of paying too much? Find out about Drivers Choice. It's time to fix Michigan's broken no-fault car insurance system. We can't afford not to.
+      </p>
+      <article class="flex-container">
+        <div class="img-container">
+          <img src="img/weinberger.jpg" alt="Weinberger">
+        </div>
+        <div class="img-container">
+          <img src="img/williams.jpg" alt="Williams">
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="state-reps" class="voting-info content-section">
+    <div class="">
+      <h3>Find your state representatives.</h3>
+      <article id="geocoder"></article>
+      <article class="results">
+        <article class="card">
+          <p><strong>Name:</strong> Stephanie Chang</p>
+          <p><strong>District:</strong> 006</p>
+          <p><a href="http://006.housedems.com/" target="_blank">Website Link</a></p>
+        </article>
+        <article class="card">
+          <p><strong>Name:</strong> Stephanie Chang</p>
+          <p><strong>District:</strong> 006</p>
+          <p><a href="http://006.housedems.com/" target="_blank">Website Link</a></p>
+        </article>
+      </article>
+    </div>
+  </section>
+  <section id="calculator" class="content-section">
+    <div class="">
+      <p>
+      Under the proposed Driver's Choice legislation, Michigan drivers will have more choice in their auto insurance medical coverage that would allow them to save an average of 20% - 50% on their insurance premiums.
+      <strong>Choose the option below that best describes you to find out how much you can save based on your actual current insurance bill:*</strong>
+      </p>
+      <label class="radio-btn" for="senior">
+        <input id="senior" type="radio" name="ins_type" value="senior">
+        I'm a senior driver covered by retiree or Medicare insurance
+      </label>
+      <label class="radio-btn active" for="full">
+        <input id="full" type="radio" name="ins_type" value="full" checked="true">
+        I'm a driver with full coverage with collision and theft
+      </label>
+      <label class="radio-btn" for="basic">
+        <input id="basic" type="radio" name="ins_type" value="basic">
+        I'm a driver with basic coverage (no collision or theft coverage)
+      </label>
+      <label for="tpp">
+        Your current Total Premium Cost:<br>
+        <input id="tpp" type="number" name="tpp" placeholder="Ex. 1085.50">
+      </label>
+      <label for="pip">
+        Your current Personal Injury Protection charge:<br>
+        <input id="pip" type="number" name="pip" placeholder="Ex. 615.50">
+      </label>
+      <label for="mcca">
+        Your current MCCA fee:<br>
+        <input id="mcca" type="number" name="mcca" placeholder="Ex. 155.50">
+      </label>
+      <article>
+        <label for="6-months" style="padding-right:1em">
+          6 months
+          <input type="radio" id="6-months" name="policy-time" checked="">
+        </label>
+        <label for=" 1-year"="" ""="" "=">
+          1 year
+          <input type=" radio"="">
+        </label>
+      </article>
+      <article id="calculate-btn">Calculate</article>
+      <p>* Please note this is only an estimate, actual insurance costs will vary.</p>
+      <div class="insurance-results">
+        <div>
+          Total Percentage Savings:
+          <strong><span id="tps"></span></strong>
+        </div>
+        <div>
+          Total Annual Savings:
+          <strong><span id="tas"></span></strong>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="">
+      MIDriversChoice.com &copy; 2017
+    </div>
+  </footer>
+  <script src="js/app.main.js"></script>
+</body>
+</html>
