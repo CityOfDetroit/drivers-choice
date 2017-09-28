@@ -196,7 +196,11 @@ var Map = function () {
 
     if (init.geocoder) {
       this.geocoder = new MapboxGeocoder({
-        accessToken: _mapboxGl2.default.accessToken
+        accessToken: _mapboxGl2.default.accessToken,
+        bbox: [
+            -90.41928, 41.69613,
+            -82.41, 48.2626
+          ]
       });
       this.geocoder.on('result', function (e) {
         if (Map.getGeocoderStatus()) {

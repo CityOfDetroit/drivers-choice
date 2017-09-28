@@ -7,7 +7,11 @@ export default class Map {
   constructor(init) {
     if(init.geocoder){
       this.geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken
+        accessToken: mapboxgl.accessToken,
+        bbox: [
+            -90.41928, 41.69613,
+            -82.41, 48.2626
+          ]
       });
       this.geocoder.on('result', function(e) {
         if(Map.getGeocoderStatus()){
