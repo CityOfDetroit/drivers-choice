@@ -69,26 +69,32 @@ label{
 	cursor: pointer;
 	width: 15em;
 	padding: 1em;
-	border: 2px solid $color-1;
+	border: 2px solid $color-4;
 	transition: all .2s ease-in-out;
 }
 #calculate-btn:hover{
-	background-color: $color-1;
+	background-color: $color-4;
+	color: $color-2;
 	transition: all .2s ease-in-out;
 }
+#calculator{
+	color: $color-4;
+}
 .radio-btn{
-	border: 1px solid $color-1;
+	border: 1px solid $color-4;
 	padding: 1em;
 	cursor: pointer;
 	display: block;
 	margin-bottom: .5em;
 }
 .radio-btn.active{
-	background: $color-1;
+	color: $color-2;
+	background: $color-4;
 }
 .insurance-results{
 	padding: 1em;
-	background-color: rgba($color-1, .5);
+	background-color: rgba($color-4, .5);
+	color: $color-2;
 }
 #about{
 	padding: 0 .5em 5em .5em;
@@ -108,19 +114,31 @@ label{
 		margin: 0 0 1em 0;
 		text-align: center;
 	}
-	#geocoder{
-		margin-bottom: 1em;
+}
+#geocoder{
+	margin-bottom: 1em;
 
-		.mapboxgl-ctrl-geocoder{
-			width: 100%;
-			border-radius: 0;
-		}
+	.mapboxgl-ctrl-geocoder{
+		width: 100%;
+		border-radius: 0;
+	}
+
+	input[type="text"]{
+		background-color: $color-1;
+		color: $color-4;
+	}
+	input[type="text"]::-webkit-input-placeholder{
+		color: $color-4;
 	}
 }
+#state-reps{
+	padding: 8em .5em;
+}
 .card{
-	background-color: $color-4;
+	background-color: $color-1;
 	padding: 1em;
 	margin-bottom: 1em;
+	color: $color-4;
 }
 .search-results{
 	display: none;
