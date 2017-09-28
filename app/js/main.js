@@ -93,16 +93,5 @@ import Connector from './connector.class.js'
     layers: [
     ]
   });
-  // let toggleDisplay = function toggleDisplay(e){
-  //   console.log(e);
-  //   console.log(e.target.parentElement.childNodes[3].className);
-  //   (e.target.parentElement.childNodes[3].className === 'accordion-content active') ? e.target.parentElement.childNodes[3].className = 'accordion-content' : e.target.parentElement.childNodes[3].className = 'accordion-content active';
-  // };
-  // let sectionBtns = document.querySelectorAll('.accordion-btn');
-  // sectionBtns.forEach(function(btn) {
-  //   btn.addEventListener('click', function(e){
-  //     toggleDisplay(e);
-  //   });
-  // });
   console.log(map);
 })(window);

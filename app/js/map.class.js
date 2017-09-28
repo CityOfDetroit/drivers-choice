@@ -48,7 +48,8 @@ export default class Map {
       interactive: init.interactive
     }));
     Map.getMap().on('load',()=>{
-      document.getElementById('geocoder').appendChild(this.geocoder.onAdd(Map.getMap()))
+      document.getElementById('geocoder').appendChild(this.geocoder.onAdd(Map.getMap()));
+      document.querySelector('#geocoder input[type="text"]').placeholder = "Enter your address.";
     });
     Map.getMap().on('style.load',()=>{
       this.loadMap();
