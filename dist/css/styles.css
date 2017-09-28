@@ -102,6 +102,10 @@ header {
     font-family: 'Montserrat', sans-serif;
     margin: auto;
     padding-bottom: .5em; }
+  header .logo {
+    width: 100%; }
+    header .logo img {
+      height: 5em; }
 
 .search {
   width: 3em;
@@ -206,10 +210,14 @@ label {
       color: #fff;
       font-family: 'Montserrat', sans-serif;
       margin: auto; }
-    header h1 {
-      padding-left: 2em;
-      margin: auto;
-      text-align: center; } }
+    header .spacer {
+      flex: 1; }
+    header .logo {
+      width: 10em;
+      position: relative;
+      top: -1em; }
+      header .logo img {
+        height: 5em; } }
 
 footer {
   height: 5em;

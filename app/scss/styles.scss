@@ -37,6 +37,13 @@ header{
 		margin: auto;
 		padding-bottom: .5em;
 	}
+	.logo{
+		width: 100%;
+
+		img{
+			height: 5em;
+		}
+	}
 }
 .search{
 	width: 3em;
@@ -162,10 +169,18 @@ label{
 			margin: auto;
 		}
 
-		h1{
-			padding-left: 2em;
-			margin: auto;
-			text-align: center;
+		.spacer{
+			flex: 1;
+		}
+
+		.logo{
+			width: 10em;
+			position: relative;
+			top: -1em;
+
+			img{
+				height: 5em;
+			}
 		}
 	}
 }
