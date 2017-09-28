@@ -1240,7 +1240,7 @@ function MapboxGeocoder(options) {
 MapboxGeocoder.prototype = {
 
   options: {
-    placeholder: 'Type your address here',
+    placeholder: 'Search',
     zoom: 16,
     flyTo: true
   },
