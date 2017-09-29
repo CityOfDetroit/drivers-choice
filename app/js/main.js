@@ -61,6 +61,8 @@ import Connector from './connector.class.js'
           }else{
             yearSavings = totalCashSavings;
           }
+          yearSavings = Math.round(yearSavings)
+
           document.getElementById('tps').innerHTML = percentageSavings + '%';
           document.getElementById('tas').innerHTML = "$" + yearSavings;
       }

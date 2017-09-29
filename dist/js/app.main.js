@@ -130,6 +130,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
           } else {
             yearSavings = totalCashSavings;
           }
+          yearSavings = Math.round(yearSavings)
+
           document.getElementById('tps').innerHTML = percentageSavings + '%';
           document.getElementById('tas').innerHTML = "$" + yearSavings;
       }
